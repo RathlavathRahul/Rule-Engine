@@ -1,4 +1,5 @@
-#Rule-Engine Evaluator
+# Rule-Engine Evaluator
+
 Develop a simple 3-tier rule engine application (Simple UI, API, and Backend) to determine user eligibility based on attributes like age, department, income, and experience. This application utilizes an Abstract Syntax Tree (AST) for flexible and dynamic rule creation, combination, and modification.
 
 ## Table of Contents
@@ -22,77 +23,75 @@ Develop a simple 3-tier rule engine application (Simple UI, API, and Backend) to
 
  ---
 
-##Features
+## Features
 
--Flexible Rule Creation: Define eligibility rules dynamically using an AST structure, making it easy to adapt to different conditions and combinations.
--Rule Combination: Combine multiple rules into a single AST, allowing for complex, layered conditions with minimal redundancy.
--Efficient Rule Evaluation: Evaluate user data against the rule AST to determine eligibility with optimized performance.
--JSON-Based Data Input: Accepts JSON format for user data, allowing integration with various data sources and easy handling of structured information.
--API-Driven Architecture: Expose rule creation, combination, and evaluation functionality through RESTful APIs for seamless integration into other systems.
-
----
-
-##Design Choices:
-
-###1.**Frontend (React with bootstrap)**
--Framework: Chose React for a responsive and modular UI.
--Component Structure: Built reusable components for rule creation, modification, and evaluation.
--State Management: Used Context API/Redux to manage rule states and user data across components.
--Form Handling: Implemented form validation and conditional inputs for rule attributes.
--Error Handling: Added user-friendly error messages for invalid rule inputs or evaluation failures.
--API Integration: Used Axios to handle API requests to backend endpoints for rule processing.
-
-###2.**Backend (Node.js and MongoDB)**
--Framework: Node.js with Express for handling RESTful APIs.
--AST Creation and Parsing: Developed custom functions to parse rule strings into AST and vice versa.
--Rule Combination Logic: Implemented logic to merge multiple ASTs, prioritizing common operators for efficiency.
--Database: Used MongoDB/PostgreSQL for rule storage and metadata, allowing flexible schema for complex rules.
--Data Validation: Used JSON schema validation to ensure incoming data aligns with expected structure.
+- Flexible Rule Creation: Define eligibility rules dynamically using an AST structure, making it easy to adapt to different conditions and combinations.
+- Rule Combination: Combine multiple rules into a single AST, allowing for complex, layered conditions with minimal redundancy.
+- Efficient Rule Evaluation: Evaluate user data against the rule AST to determine eligibility with optimized performance.
+- JSON-Based Data Input: Accepts JSON format for user data, allowing integration with various data sources and easy handling of structured information.
+- API-Driven Architecture: Expose rule creation, combination, and evaluation functionality through RESTful APIs for seamless integration into other systems.
 
 ---
 
-##Tech Stack
+## Design Choices:
 
-###Frontend
+### 1.**Frontend (React with bootstrap)**
+- Framework: Chose React for a responsive and modular UI.
+- Component Structure: Built reusable components for rule creation, modification, and evaluation.
+- State Management: Used Context API/Redux to manage rule states and user data across components.
+- Form Handling: Implemented form validation and conditional inputs for rule attributes.
+- Error Handling: Added user-friendly error messages for invalid rule inputs or evaluation failures.
+- API Integration: Used Axios to handle API requests to backend endpoints for rule processing.
 
--**Framework**: React – For building a modular and responsive user interface.
--**State Management**: Context API / Redux – To manage application state and user data.
--**HTTP Client**: Axios – For handling API requests and responses.
+### 2.**Backend (Node.js and MongoDB)**
+- Framework: Node.js with Express for handling RESTful APIs.
+- AST Creation and Parsing: Developed custom functions to parse rule strings into AST and vice versa.
+- Rule Combination Logic: Implemented logic to merge multiple ASTs, prioritizing common operators for efficiency.
+- Database: Used MongoDB/PostgreSQL for rule storage and metadata, allowing flexible schema for complex rules.
+- Data Validation: Used JSON schema validation to ensure incoming data aligns with expected structure.
 
-###Backend
+ ---
+ 
+  ## Tech Stack
 
--**Server Framework**: Node.js with Express – For building and managing RESTful APIs.
--**Rule Parsing and AST**: Custom AST functions – For converting rules into Abstract Syntax Trees.
--**Database**: MongoDB / PostgreSQL – For storing rule definitions and application metadata.
+### Frontend
+
+- **Framework:** React – For building a modular and responsive user interface.
+- **State Management:** Context API / Redux – To manage application state and user data.
+- **HTTP Client:** Axios – For handling API requests and responses.
+
+### Backend
+
+- **Server Framework:** Node.js with Express – For building and managing RESTful APIs.
+- **Rule Parsing and AST:**  Custom AST functions – For converting rules into Abstract Syntax Trees.
+- **Database:** MongoDB / PostgreSQL – For storing rule definitions and application metadata.
 
 ---
 
-##Dependencies
+## Dependencies
 Install these dependencies by running npm install in the frontend and backend directories:
 
-###Frontend 
+### Frontend 
 
--**React**: ^17.0.2
--**Bootstrap** :(v5+)
--**Redux (or Context API if using Context)**: ^4.1.0
--**Axios**: ^0.21.1
--**Styled Components (if using)**: ^5.3.0
-
-
-###Backend 
-
--**Express**: ^4.17.1
--**Mongoose** (if using MongoDB): ^5.13.7
--**Node.js**: (v20.16.0)
--**JSEP** (for parsing and evaluating rule conditions)
--**dotenv** (for environment variable management
+- **React:** ^17.0.2
+- **Bootstrap:** (v5+)
+- **Redux:** (or Context API if using Context) ^4.1.0
+- **Axios:** ^0.21.1
+- **Styled Components:** (if using) ^5.3.0
 
 
+### Backend 
 
+- **Express:** ^4.17.1
+- **Mongoose** (if using MongoDB): ^5.13.7
+- **Node.js:** (v20.16.0)
+- **JSEP** (for parsing and evaluating rule conditions)
+- **dotenv** (for environment variable management
+ 
 ---
 
-##Folder Structure
-
+## Folder Structure
+```
 project-root/
 ├── frontend/
 │   ├── public/
@@ -115,7 +114,7 @@ project-root/
 │   └── package.json
 ├── docker-compose.yml           # Docker configuration
 └── README.md
-
+```
 ---
 
 ## Build Instructions
@@ -250,20 +249,20 @@ Navigate to `http://localhost:3000` in your browser to interact with the Rule En
 
 ---
 
-##Environment Variables
+## Environment Variables
 In both the backend and frontend, you'll need to configure environment variables:
 
-###Backend
+### Backend
 
--**MONGO_URI**: MongoDB connection string
--**PORT**: The port on which the backend server will run (default: 3001)
+- **MONGO_URI**: MongoDB connection string
+- **PORT**: The port on which the backend server will run (default: 3001)
 
-###Frontend
--No specific environment variables are required unless necessary.
+### Frontend
+- No specific environment variables are required unless necessary.
 
 ---
 
-##License
+## License
 This project is licensed under the MIT License.
 
 ---
